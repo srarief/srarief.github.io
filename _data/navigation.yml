@@ -3,9 +3,9 @@
 - title: Home
   url: /
 - title: Posts
-   url: /posts/
+  url: /posts/
 - title: Categories
-   url: /categories/
+  url: /categories/
 - title: Tags
   url: /tags/
 # - title: Recipes
