@@ -1,24 +1,45 @@
 ---
-title: "My 1st post"
-categories: 
-  - Machine Learning1
-  - Test Again
+title: "My1st Post123"
+categories:
+  - Post Formats2
+  - Test lagi
 tags:
-  - What is1
-  - What is2
-  - What is3
-last_modified_at: 2018-04-08T10:16:49-05:00
+  - Post Formats2
+last_modified_at: 2018-02-01T12:54:35-05:00
 ---
 
-## HTML Elements
-TEST 123
-Below is are some HTML elements. Check the source code to see the many embedded elements within paragraphs.
-TEST 456
-## Body text
+This post tests YouTube video embeds.
 
-Lorem ipsum dolor sit amet, test link adipiscing elit. **This is strong**. Nullam dignissim convallis est. Quisque aliquam.
+{% include responsive-embed url="https://www.youtube-nocookie.com/embed/l2Of1-d5E5o?controls=0&amp;" %}
 
-![Smithsonian Image]({{ '/images/3953273590_704e3899d5_m.jpg' | relative_url }})
-{: .image-right}
+Simply use the `responsive-embed` helper include like so:
 
-This post has YAML Front Matter of `hidden: true` and should not appear in `paginator.posts`.
+```html
+{% raw %}{% include responsive-embed url="https://www.youtube.com/watch?v=-PVofD2A9t8" ratio="16:9" %}{% endraw %}
+```
+
+Or wrap embeds with a `<div>` element and the appropriate classes:
+
+```html
+<!-- 21:9 aspect ratio -->
+<div class="responsive-embed responsive-embed-21by9">
+  <iframe class="responsive-embed-item" src="..."></iframe>
+</div>
+
+<!-- 16:9 aspect ratio -->
+<div class="responsive-embed responsive-embed-16by9">
+  <iframe class="responsive-embed-item" src="..."></iframe>
+</div>
+
+<!-- 4:3 aspect ratio -->
+<div class="responsive-embed responsive-embed-4by3">
+  <iframe class="responsive-embed-item" src="..."></iframe>
+</div>
+
+<!-- 1:1 aspect ratio -->
+<div class="responsive-embed responsive-embed-1by1">
+  <iframe class="responsive-embed-item" src="..."></iframe>
+</div>
+```
+
+
