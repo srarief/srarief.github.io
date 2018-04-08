@@ -105,7 +105,7 @@ author:
       icon: fab fa-twitter-square
     - title: Linkedin
       url: https://linkedin.com/in/asrachman
-      icon: fab fa-linkedin-square
+      icon: fab fa-linkedin
     - title: GitHub
       url: https://github.com/srarief
       icon: fab fa-github-square
@@ -117,7 +117,7 @@ footer_links:
     icon: fab fa-twitter-square
   - title: Linkedin
     url: https://linkedin.com/in/asrachman
-    icon: fab fa-linkedin-square
+    icon: fab fa-linkedin-in
   - title: GitHub
     url: https://github.com/srarief
     icon: fab fa-github-square
