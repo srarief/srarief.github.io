@@ -1,13 +1,14 @@
 ---
-title: "1st Post"
-category: 
+title: "My 1st post"
+sub_title: "The common elements"
+categories: 
   - Machine Learning1
   - Test Lah 
 tags:
   - What is1
   - What is2
   - What is3
-last_modified_at:2018-04-08
+last_modified_at:2018-04-08T10:16:49-05:00
 ---
 
 ## HTML Elements
