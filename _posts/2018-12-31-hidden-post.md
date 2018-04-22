@@ -26,3 +26,6 @@ Machine Learning Tutorial
 disp.ee.ntu.edu
 
 3. Meme Interpretasi coefficient di Twitter
+
+4. Target bener2 tidak diketahui persamaanya, kalau model g diketahui tapi hanya 
+koefisien persamaan yg tidak diketahui -> permasalahan cure fitting
