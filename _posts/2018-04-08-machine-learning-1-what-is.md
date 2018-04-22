@@ -14,7 +14,6 @@ Catatan pertama di blog. Yuhu :)
 
 Catatan ini akan membahas pengenalan dasar Machine Learning. Fokus yang dibahas :
 - Apa itu Machine Learning ?
-- Mungkinkah sebuah mesin belajar ? Jika iya, bagaimana ?
 
 Sebelum membahas Machine Learning, mari bayangkan sebuah eskperimen sederhana :
 
@@ -34,7 +33,7 @@ kemungkinan besar orang tersebut tidak bisa memberikan jawaban yang jelas.
 
 
 > **We didn't learn what a tree (or number) is by studying the mathematical definition of a trees.**
-> We learned it by looking at trees. In other words we learned from 'data'.
+> **We learned it by looking at trees. In other words we learned from 'data'.**
 > <footer><strong>Learning from Data</strong> &mdash;  </footer>
 	
 The best first pharagraph on Machine Learning books :)
@@ -82,14 +81,14 @@ Untuk viewer bisa kita deskripsikan dalam vektor
 * seberapa sering dia menonton film berbahasa Inggris/Jepang/Korea/....
 * seberapa sering dia menonton film-nya Nolan/Del Toro/Russo/....
 * seberapa sering dia menonton film yang pemainnya ada Emma W/Emma Stone/Emma.....
-* dst
+* dst ...
 
 Sedangkan dari sisi film kita bisa deskripsikan juga dalam vektor
 * seberapa banyak unsur komedi/aksi/drama dalam film
 * bahasa yang digunakan
 * siapa director film tersebut
 * siapa lead actor/actress di film tersebut
-* dst
+* dst ...
 
 <figure class="align-center">
   <a href="#"><img src="{{ '/images/movie-rating-array.jpg' | absolute_url }}" alt=""></a>
@@ -150,7 +149,7 @@ Feature yang dihasilkan mungkin tidak seintuitif konten komedi atau aktor, bahka
 saja sangat abstrak. 
 {: .text-justify}
 
-> After all the algorithm is only trying to find the best way to predict how a viewer would rate a movie, not necessarily explain to us how it is done.
+> ** After all the algorithm is only trying to find the best way to predict how a viewer would rate a movie, not necessarily explain to us how it is done. **
 > <footer><strong>Learning from Data</strong> &mdash; </footer>
 	
 ## Learning vs Design
@@ -200,7 +199,7 @@ set yang digunakan. Paradigma learning yang sudah dibahas (dan akan difokuskan p
 learning.
 {: .text-justify}
 
-1. Supervised Learning 
+### Supervised Learning 
 Jika dataset mengandung label (output yang diharapkan). Paradigma yang paling banyak digunakan. 
 Dataset : (input, correct output).
 
@@ -209,7 +208,7 @@ Dataset : (input, correct output).
   <figcaption>Machine Learning Tutorial. (Kiri) Data set dengan label berupa warna . (Kanan) Sistem klasifikasi yang dihasilkan.  </figcaption>
 </figure> 
 
-2. Unsupervised Learning
+### Unsupervised Learning
 Jika dataset hanya berisi nilai input saja, tidak ada label. Biasanya digunakan untuk clustering  atau factor analysis. 
 Dataset : (input).
 
@@ -218,7 +217,7 @@ Dataset : (input).
   <figcaption>Machine Learning Tutorial. (Kiri) Data set tanpa label . (Kanan) Clustering yang dihasilkan.  </figcaption>
 </figure> 
 
-3. Semisupervised Learning
+### Semisupervised Learning
 Jika sebagian dataset memiliki label dan sebagian lagi tidak. 
 Dataset : (input, correct output/ null).
 
@@ -227,7 +226,7 @@ Dataset : (input, correct output/ null).
   <figcaption>Machine Learning Tutorial. (Kiri) Sebagian data set memiliki label dan sebagian tidak . (Kanan) Klasifikasi yang dihasilkan.  </figcaption>
 </figure> 
 
-4. Reinforcement Learning
+### Reinforcement Learning
 Jika dataset memiliki label tidak dalam bentuk correct output, melainkan dalam bentuk pasangan output dan ukuran seberapa bagus
 output tersebut. Banyak digunakan dalam bidang robotic dan game.
 Dataset : (input, output, grade for this output).
