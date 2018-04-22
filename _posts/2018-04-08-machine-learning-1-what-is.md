@@ -105,11 +105,11 @@ dapat dihilangkan. Untuk melakukan hal tersebut Learning Algorithm akan melakuka
 berdasarkan nilai rating sebelumnya. 
 {: .text-justify}
 
-Berdasarkan input $x$ (informasi viewer dan film), output $y$ (nilai rating), maka data [Viewer, Film, Rating] dapat 
-dijadikan dataset $\cal D$ yaitu pasangan $(x_1,y_1) , (x_2,y_2) , \dots, (x_n,y_n)$, $X$ adalah input space (semua
-kemungkinan nilai $x$, kombinasi informasi viewer dan film) dan $Y$ adalah output space (semua kemungkinan nilai $y$, 
-untuk rating misal dari 0-100). Terdapat target function yang ingin dicari dan tidak diketahui $y = f(x) $, dan kumpulan 
-fungsi yang akan diuji yaitu $\cal H$ (hypothesis set).
+Berdasarkan input \\(x\\( (informasi viewer dan film), output \\(y\\( (nilai rating), maka data [Viewer, Film, Rating] dapat 
+dijadikan dataset \\(\cal D\\( yaitu pasangan \\((x_1,y_1) , (x_2,y_2) , \dots, (x_n,y_n)\\(, \\(X\\( adalah input space (semua
+kemungkinan nilai \\(x\\(, kombinasi informasi viewer dan film) dan \\(Y\\( adalah output space (semua kemungkinan nilai \\(y\\(, 
+untuk rating misal dari 0-100). Terdapat target function yang ingin dicari dan tidak diketahui \\(y = f(x) \\(, dan kumpulan 
+fungsi yang akan diuji yaitu \\(\cal H\\( (hypothesis set).
 {: .text-justify}
 
 <figure class="align-center">
@@ -117,31 +117,31 @@ fungsi yang akan diuji yaitu $\cal H$ (hypothesis set).
   <figcaption>Learning from Data. Diagram komponen machine learning </figcaption>
 </figure> 
 
-* **Input**: $x = (x_1, x_2, \dots, x_n)$
-* **Output**: $y$
-* **Data**: $(x_1, y_1), (x_2, y_2), \dots, (x_n, y_n)$
-* **Target Function**: $f\colon \cal {X} \to \cal {Y}$
-* **Hypothesis**: $g\colon \cal {X} \to \cal {Y}$
-    * Hasil dari learning, $g \approx f$
-* **Learning Algorithm**: $\cal A$
-* **Input Space**: $\cal X$
-    * Semua kemungkinan nilai $x$ dimana $x \in \cal X$
-* **Output Space**: $\cal Y$
-    * Semua kemungkinan nilai $y$ dimana $y \in \cal Y$
-* **Hypothesis Set**: $\cal H$
-    * Semua set kandidat hypothesis dimana $g \in \cal H$
+* **Input**: \\(x = (x_1, x_2, \dots, x_n)\\(
+* **Output**: \\(y\\(
+* **Data**: \\((x_1, y_1), (x_2, y_2), \dots, (x_n, y_n)\\(
+* **Target Function**: \\(f\colon \cal {X} \to \cal {Y}\\(
+* **Hypothesis**: \\(g\colon \cal {X} \to \cal {Y}\\(
+    * Hasil dari learning, \\(g \approx f\\(
+* **Learning Algorithm**: \\(\cal A\\(
+* **Input Space**: \\(\cal X\\(
+    * Semua kemungkinan nilai \\(x\\( dimana \\(x \in \cal X\\(
+* **Output Space**: \\(\cal Y\\(
+    * Semua kemungkinan nilai \\(y\\( dimana \\(y \in \cal Y\\(
+* **Hypothesis Set**: \\(\cal H\\(
+    * Semua set kandidat hypothesis dimana \\(g \in \cal H\\(
 
-Together, $\cal A$ and $\cal H$ are known as the _learning model_.
+Together, \\(\cal A\\( and \\(\cal H\\( are known as the _learning model_.
 
 Target function dan data set merupakan hal yang melekat pada satu persoalan, tidak dapat diubah. tetapi learning 
 algorithm dan hypothesis set dapat kita ubah sesuai keinginan. Dua hal inilah yang akan menjadi alat kita untuk 
-menyelesaikan persoalan. Learning algorithm $\cal A$ dan hypothesis set $\cal H$ sering kali digabung menjadi **learning model**.
+menyelesaikan persoalan. Learning algorithm \\(\cal A\\( dan hypothesis set \\(\cal H\\( sering kali digabung menjadi **learning model**.
 {: .text-justify}
 
 Beberapa contoh learning model sederhana dan hypothesis set-nya: 
-* Linear regression ($\cal H$ melingkupi semua polinomial orde 1)
-* Decision tree ($\cal H$ melingkupi a set of boolean)
-* Multilayer perceptron tanpa aktivasi ($\cal H$ melingkupi persamaan polinomial orde n)
+* Linear regression (\\(\cal H\\( melingkupi semua polinomial orde 1)
+* Decision tree (\\(\cal H\\( melingkupi a set of boolean)
+* Multilayer perceptron tanpa aktivasi (\\(\cal H\\( melingkupi persamaan polinomial orde n)
 
 Termasuk pada learning model yaitu menentukan bagaimana cara menentukan dan mengupdate koefisien pada persamaan 
 hipotesis (gradient based, genetic algorithm) dan persamaan untuk menentukan error (SSE, Quadratic, RMSE, Cross Entropy dll) 
@@ -149,8 +149,8 @@ hipotesis (gradient based, genetic algorithm) dan persamaan untuk menentukan err
 
 **Note**: istilah learning algorithm dan learning model sering kali memiliki arti berbeda pada sumber lain.
 
-Dari dataset $\cal D$, learning algorithm $\cal A$ akan memilih fungsi $g$ dari hypothesis set $\cal H$ yang paling mendekati 
-target function (jumlah selisih antara $f(y)$ dan $g(y)$ paling kecil diantara semua hypothesis set yang ada)
+Dari dataset \\(\cal D\\(, learning algorithm \\(\cal A\\( akan memilih fungsi \\(g\\( dari hypothesis set \\(\cal H\\( yang paling mendekati 
+target function (jumlah selisih antara \\(f(y)\\( dan \\(g(y)\\( paling kecil diantara semua hypothesis set yang ada)
 {: .text-justify}
 
 <figure class="align-center">
@@ -175,8 +175,8 @@ Misal : Kita ingin membuat sistem untuk menentukan nominal nilai sebuah koin pad
 
 ### Metode Learning
 Kita mengumpulkan ukuran, berat dan nominal koin menjadi sebuah data set. Ukuran dan berat koin kita jadikan 
-input vektor $x$ dan nominal koin menjadi output vektor $y$. Kemudian kita pilih learning model yang akan digunakan
-(misal dengan K-means) sehingga terpilih hipotesis $y = g(x)$ yang fit pada data set. Fungsi $g(x)$ inilah yang nantinya
+input vektor \\(x\\( dan nominal koin menjadi output vektor \\(y\\(. Kemudian kita pilih learning model yang akan digunakan
+(misal dengan K-means) sehingga terpilih hipotesis \\(y = g(x)\\( yang fit pada data set. Fungsi \\(g(x)\\( inilah yang nantinya
 akan digunakan untuk menentukan nominal koin berdasar input yang masuk.
 {: .text-justify}
 
@@ -198,8 +198,8 @@ dari nilai probabilitas tertinggi pada input yang masuk.
 </figure> 
 
 Perbedaan utama antara learning dan design adalah pada penggunaan data. Pada metode design kita dapat menentukan
-fungsi target $f$ berdasarkan model analitik (tanpa perlu melihat data) sedangkan pada metode learning kita memerlukan data
-untuk menentukan fungsi target $f$. Kedua metode tentunya memiliki kelemahan dan keunggulan masing-masing.
+fungsi target \\(f\\( berdasarkan model analitik (tanpa perlu melihat data) sedangkan pada metode learning kita memerlukan data
+untuk menentukan fungsi target \\(f\\(. Kedua metode tentunya memiliki kelemahan dan keunggulan masing-masing.
 {: .text-justify}
 
 ## Types of Learning
@@ -212,7 +212,7 @@ learning.
 
 ### Supervised Learning 
 Jika dataset mengandung label (output yang diharapkan). Paradigma yang paling banyak digunakan. 
-```**Dataset : (input, correct output).**```
+```Dataset : (input, correct output).```
 
 <figure class="align-center">
   <a href="#"><img src="{{ '/images/supervised-learning.jpg' | absolute_url }}" alt=""></a>
@@ -221,7 +221,7 @@ Jika dataset mengandung label (output yang diharapkan). Paradigma yang paling ba
 
 ### Unsupervised Learning
 Jika dataset hanya berisi nilai input saja, tidak ada label. Biasanya digunakan untuk clustering  atau factor analysis. 
-```**Dataset : (input).**```
+```Dataset : (input).```
 
 <figure class="align-center">
   <a href="#"><img src="{{ '/images/unsupervised-learning.jpg' | absolute_url }}" alt=""></a>
@@ -230,7 +230,7 @@ Jika dataset hanya berisi nilai input saja, tidak ada label. Biasanya digunakan 
 
 ### Semisupervised Learning
 Jika sebagian dataset memiliki label dan sebagian lagi tidak. 
-```**Dataset : (input, correct output/ null).**```
+```Dataset : (input, correct output/ null).```
 
 <figure class="align-center">
   <a href="#"><img src="{{ '/images/semisupervised-learning.jpg' | absolute_url }}" alt=""></a>
@@ -240,7 +240,7 @@ Jika sebagian dataset memiliki label dan sebagian lagi tidak.
 ### Reinforcement Learning
 Jika dataset memiliki label tidak dalam bentuk correct output, melainkan dalam bentuk pasangan output dan ukuran seberapa bagus
 output tersebut. Banyak digunakan dalam bidang robotic dan game.
-```**Dataset : (input, output, grade for this output).**```
+```Dataset : (input, output, grade for this output).```
 {: .text-justify}
 
 
