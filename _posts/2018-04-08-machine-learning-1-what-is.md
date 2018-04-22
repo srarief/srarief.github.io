@@ -12,12 +12,12 @@ last_modified_at: 2018-04-15T12:54:35-05:00
 
 Catatan pertama di blog. Yuhu :)
 
-Catatan ini akan membahas pengenalan dasar Machine Learning. Fokus yang dibahas :
-- Apa itu Machine Learning ?
+Catatan ini akan membahas pengenalan dasar machine learning. Fokus yang dibahas :
+- Apa itu machine learning ?
 
-Sebelum membahas Machine Learning, mari bayangkan sebuah eskperimen sederhana :
+Sebelum membahas machine learning, mari bayangkan sebuah eskperimen sederhana :
 
-1. Jika kita menunjukan gambar angka 1-5 pada anak TK dan menanyakan gambar mana yang merupakan angka 4, 
+1. Jika kita menunjukan gambar angka 0-9 pada anak TK dan menanyakan gambar mana yang merupakan angka 4, 
 maka kemungkinan besar anak tersebut akan memberikan jawaban yang benar.
 {: .text-justify}
 
@@ -36,27 +36,27 @@ kemungkinan besar orang tersebut tidak bisa memberikan jawaban yang jelas.
 > **We learned it by looking at trees. In other words we learned from 'data'.**
 > <footer><strong>Learning from Data</strong> &mdash;  </footer>
 	
-The best first pharagraph on Machine Learning books :)
+The best first pharagraph in machine learning books :)
 
 Prinsip yang sama juga ingin kita terapkan pada sebuah mesin. Kita ingin sebuah mesin mengerjakan sesuatu 
 bukan dari definisi(model atau set of instructions) yang kita masukkan, melainkan dari data yang kita berikan. 
-Inilah intuisi dasar dari Machine Learning (frasa Machine Learning dipakai untuk membedakan denga proses 
-Human Learning). 
+Inilah intuisi dasar dari machine learning (frasa machine learning dipakai untuk membedakan denga proses 
+human learning). 
 {: .text-justify}
 
-Pembeda Machine Learning dengan istilah Artificial Intellegence dan Deep Learning :
-* AI : Konsep yang abstrak, lebih berkaitan dengan Cognitive Research. What is artificial ? and what is intellegence ?
-* Deep Learning: Salah satu teknik (learning model) pada Machine Learning, Neural Net dengan hidden layer yang banyak/dalam (deep) 
+Pembeda machine learning dengan istilah artificial intellegence (AI) dan deep learning (DL) :
+* AI : Konsep yang abstrak, lebih berkaitan dengan cognitive research. What is artificial ? and what is intellegence ?
+* Deep Learning: Salah satu teknik (learning model) pada machine learning, neural net dengan hidden layer yang banyak/dalam (deep) 
 
 
 <figure class="align-center">
   <a href="#"><img src="{{ '/images/ai-ml-dl.jpg' | absolute_url }}" alt=""></a>
-  <figcaption>Artificial Intellegence, Machine learning, Deep Learning </figcaption>
+  <figcaption>Artificial Intellegence, Machine Learning, Deep Learning </figcaption>
 </figure> 
  
 ## Contoh Machine Learning
  
-Salah satu contoh penggunaan Machine Learning adalah untuk membangun recommender system. Hampir semua online 
+Salah satu contoh penggunaan machine learning adalah untuk membangun recommender system. Hampir semua online 
 platform yang ada memiliki recommender system
 {: .text-justify}
 
@@ -100,16 +100,16 @@ sang viewer. Namun pemilihan feature (genre, bahasa, sutradara, lead actor/actre
 model seringkali menyita tenaga dan waktu pekerja (membuat kurang produktif).
 {: .text-justify}
 
-Dengan menggunakan Machine Learning(terutama Deep Learning) diharapkan proses pemilihan feature [User, Movie, Rating] 
+Dengan menggunakan Machine learning(terlebih pada deep learning) diharapkan proses pemilihan feature [User, Movie, Rating] 
 dapat dihilangkan. Untuk melakukan hal tersebut Learning Algorithm akan melakukan 'reverse engineering' hanya 
 berdasarkan nilai rating sebelumnya. 
 {: .text-justify}
 
-Berdasarkan input x (informasi viewer dan film), output y (nilai rating), maka data [Viewer, Film, Rating] dapat 
-dijadikan dataset D yaitu pasangan (x1, y1),(x2, y2)...(xn, yn), X adalah input space (semua kemungkinan nilai x, 
-kombinasi informasi viewer dan film) dan Y adalah output space (semua kemungkinan nilai y, untuk rating misal 
-dari 0-100). Terdapat target function yang ingin dicari dan tidak diketahui y = f(x), dan kumpulan fungsi yang 
-akan diuji yaitu H (Hypothesis set).
+Berdasarkan input $x$ (informasi viewer dan film), output $y$ (nilai rating), maka data [Viewer, Film, Rating] dapat 
+dijadikan dataset $\cal D$ yaitu pasangan $(x_1,y_1) , (x_2,y_2) , \dots, (x_n,y_n)$, $X$ adalah input space (semua
+kemungkinan nilai $x$, kombinasi informasi viewer dan film) dan $Y$ adalah output space (semua kemungkinan nilai $y$, 
+untuk rating misal dari 0-100). Terdapat target function yang ingin dicari dan tidak diketahui $y = f(x) $, dan kumpulan 
+fungsi yang akan diuji yaitu $\cal H$ (hypothesis set).
 {: .text-justify}
 
 <figure class="align-center">
@@ -117,37 +117,48 @@ akan diuji yaitu H (Hypothesis set).
   <figcaption>Learning from Data. Diagram komponen machine learning </figcaption>
 </figure> 
 
-### POINT x,y,X,Y,H,dan A (dalam Mathjax)
+* **Input**: $x = (x_1, x_2, \dots, x_n)$
+* **Output**: $y$
+* **Data**: $(x_1, y_1), (x_2, y_2), \dots, (x_n, y_n)$
+* **Target Function**: $f\colon \cal {X} \to \cal {Y}$
+* **Hypothesis**: $g\colon \cal {X} \to \cal {Y}$
+    * Hasil dari learning, $g \approx f$
+* **Learning Algorithm**: $\cal A$
+* **Input Space**: $\cal X$
+    * Semua kemungkinan nilai $x$ dimana $x \in \cal X$
+* **Output Space**: $\cal Y$
+    * Semua kemungkinan nilai $y$ dimana $y \in \cal Y$
+* **Hypothesis Set**: $\cal H$
+    * Semua set kandidat hypothesis dimana $g \in \cal H$
 
-Target function (f(x)) dan data set (x1, y1),(x2, y2)...(xn, yn) merupakan hal yang melekat pada satu persoalan, 
-tidak dapat diubah. tetapi learning algorithm dan set hipotesis  dapat kita ubah sesuai keinginan. Dua hal inilah 
-yang akan menjadi tool kita untuk menyelesaikan persoalan. Learning algorithm dan set hipotesis sering kali digabung
-menjadi Learning Model.
+Together, $\cal A$ and $\cal H$ are known as the _learning model_.
+
+Target function dan data set merupakan hal yang melekat pada satu persoalan, tidak dapat diubah. tetapi learning 
+algorithm dan hypothesis set dapat kita ubah sesuai keinginan. Dua hal inilah yang akan menjadi alat kita untuk 
+menyelesaikan persoalan. Learning algorithm $\cal A$ dan hypothesis set $\cal H$ sering kali digabung menjadi **learning model**.
 {: .text-justify}
 
-Beberapa contoh Learning Model sederhana dan H (Hypothesis set): 
-* Linear regression (H melingkupi semua polinomial orde 1)
-* Decision Tree (H melingkupi a set of boolean)
-* Multilayer perceptron tanpa aktivasi (H melingkupi persamaan polinomial orde n)
+Beberapa contoh learning model sederhana dan hypothesis set-nya: 
+* Linear regression ($\cal H$ melingkupi semua polinomial orde 1)
+* Decision tree ($\cal H$ melingkupi a set of boolean)
+* Multilayer perceptron tanpa aktivasi ($\cal H$ melingkupi persamaan polinomial orde n)
 
-Termasuk pada Learning model yaitu menentukan bagaimana cara menentukan dan mengupdate koefisien pada persamaan 
+Termasuk pada learning model yaitu menentukan bagaimana cara menentukan dan mengupdate koefisien pada persamaan 
 hipotesis (gradient based, genetic algorithm) dan persamaan untuk menentukan error (SSE, Quadratic, RMSE, Cross Entropy dll) 
 {: .text-justify}
 
 **Note**: istilah learning algorithm dan learning model sering kali memiliki arti berbeda pada sumber lain.
 
-Dari dataset D, Learning Algorithm akan memilih fungsi g dari Hypothesis set (H) yang paling mendekati target function 
-(jumlah selisih antara f(y) dan g(y) paling kecil diantara semua set hipotesis yang ada)
+Dari dataset $\cal D$, learning algorithm $\cal A$ akan memilih fungsi $g$ dari hypothesis set $\cal H$ yang paling mendekati 
+target function (jumlah selisih antara $f(y)$ dan $g(y)$ paling kecil diantara semua hypothesis set yang ada)
 {: .text-justify}
 
 <figure class="align-center">
   <a href="#"><img src="{{ '/images/hypothesis-set.jpg' | absolute_url }}" alt=""></a>
-  <figcaption>Machine Learning Tutorial. Ilustrasi pemilihan fungsi g dari Hypothesis set (H)  </figcaption>
+  <figcaption>Machine Learning Tutorial. Ilustrasi pemilihan fungsi g dari hypothesis set (H)  </figcaption>
 </figure> 
 
-Feature yang dihasilkan mungkin tidak seintuitif konten komedi atau aktor, bahkan bisa 
-saja sangat abstrak. 
-{: .text-justify}
+Feature yang dihasilkan mungkin tidak seintuitif konten komedi atau aktor, bahkan bisa saja sangat abstrak. 
 
 > ** After all the algorithm is only trying to find the best way to predict how a viewer would rate a movie, not necessarily explain to us how it is done. **
 > <footer><strong>Learning from Data</strong> &mdash; </footer>
@@ -162,10 +173,10 @@ permasalahan (domain-driven).
 
 Misal : Kita ingin membuat sistem untuk menentukan nominal nilai sebuah koin pada vending machine.
 
-Metode Learning
+### Metode Learning
 Kita mengumpulkan ukuran, berat dan nominal koin menjadi sebuah data set. Ukuran dan berat koin kita jadikan 
-input vektor (x) dan nominal koin menjadi output vektor (y). Kemudian kita pilih learning model yang akan digunakan
-(misal dengan K-means) sehingga terpilih hipotesis y = g(x) yang fit pada data set. Fungsi g(x) inilah yang nantinya
+input vektor $x$ dan nominal koin menjadi output vektor $y$. Kemudian kita pilih learning model yang akan digunakan
+(misal dengan K-means) sehingga terpilih hipotesis $y = g(x)$ yang fit pada data set. Fungsi $g(x)$ inilah yang nantinya
 akan digunakan untuk menentukan nominal koin berdasar input yang masuk.
 {: .text-justify}
 
@@ -175,8 +186,8 @@ akan digunakan untuk menentukan nominal koin berdasar input yang masuk.
 </figure> 
 
 
-Metode Design
-Kita tanyakan spesifikasi uang logam kepada PERURI dan jumlah uang logam yang beredar kepada BI. Berdasarkan spesfikasi 
+### Metode Design
+Kita tanyakan spesifikasi uang logam kepada PERURI dan jumlah uang logam yang beredar kepada BI. Berdasarkan spesifikasi 
 tersebut kita buat distribusi probabilitas berdasar ukuran, berat dan nominal. Nilai nominal nantinya akan ditentukan 
 dari nilai probabilitas tertinggi pada input yang masuk. 
 {: .text-justify}
@@ -187,8 +198,8 @@ dari nilai probabilitas tertinggi pada input yang masuk.
 </figure> 
 
 Perbedaan utama antara learning dan design adalah pada penggunaan data. Pada metode design kita dapat menentukan
-fungsi target f berdasarkan model analitik (tanpa perlu melihat data) sedangkan pada metode learning kita memerlukan data
-untuk menentukan fungsi target f. Kedua metode tentunya memiliki kelemahan dan keunggulan masing-masing.
+fungsi target $f$ berdasarkan model analitik (tanpa perlu melihat data) sedangkan pada metode learning kita memerlukan data
+untuk menentukan fungsi target $f$. Kedua metode tentunya memiliki kelemahan dan keunggulan masing-masing.
 {: .text-justify}
 
 ## Types of Learning
@@ -201,7 +212,7 @@ learning.
 
 ### Supervised Learning 
 Jika dataset mengandung label (output yang diharapkan). Paradigma yang paling banyak digunakan. 
-Dataset : (input, correct output).
+```Dataset : (input, correct output).```
 
 <figure class="align-center">
   <a href="#"><img src="{{ '/images/supervised-learning.jpg' | absolute_url }}" alt=""></a>
@@ -210,7 +221,7 @@ Dataset : (input, correct output).
 
 ### Unsupervised Learning
 Jika dataset hanya berisi nilai input saja, tidak ada label. Biasanya digunakan untuk clustering  atau factor analysis. 
-Dataset : (input).
+```Dataset : (input).```
 
 <figure class="align-center">
   <a href="#"><img src="{{ '/images/unsupervised-learning.jpg' | absolute_url }}" alt=""></a>
@@ -219,7 +230,7 @@ Dataset : (input).
 
 ### Semisupervised Learning
 Jika sebagian dataset memiliki label dan sebagian lagi tidak. 
-Dataset : (input, correct output/ null).
+```Dataset : (input, correct output/ null).```
 
 <figure class="align-center">
   <a href="#"><img src="{{ '/images/semisupervised-learning.jpg' | absolute_url }}" alt=""></a>
@@ -229,7 +240,7 @@ Dataset : (input, correct output/ null).
 ### Reinforcement Learning
 Jika dataset memiliki label tidak dalam bentuk correct output, melainkan dalam bentuk pasangan output dan ukuran seberapa bagus
 output tersebut. Banyak digunakan dalam bidang robotic dan game.
-Dataset : (input, output, grade for this output).
+```Dataset : (input, output, grade for this output).```
 {: .text-justify}
 
 
