@@ -212,7 +212,7 @@ learning.
 
 ### Supervised Learning 
 Jika dataset mengandung label (output yang diharapkan). Paradigma yang paling banyak digunakan. 
-```Dataset : (input, correct output).```
+```**Dataset : (input, correct output).**```
 
 <figure class="align-center">
   <a href="#"><img src="{{ '/images/supervised-learning.jpg' | absolute_url }}" alt=""></a>
@@ -221,7 +221,7 @@ Jika dataset mengandung label (output yang diharapkan). Paradigma yang paling ba
 
 ### Unsupervised Learning
 Jika dataset hanya berisi nilai input saja, tidak ada label. Biasanya digunakan untuk clustering  atau factor analysis. 
-```Dataset : (input).```
+```**Dataset : (input).**```
 
 <figure class="align-center">
   <a href="#"><img src="{{ '/images/unsupervised-learning.jpg' | absolute_url }}" alt=""></a>
@@ -230,7 +230,7 @@ Jika dataset hanya berisi nilai input saja, tidak ada label. Biasanya digunakan 
 
 ### Semisupervised Learning
 Jika sebagian dataset memiliki label dan sebagian lagi tidak. 
-```Dataset : (input, correct output/ null).```
+```**Dataset : (input, correct output/ null).**```
 
 <figure class="align-center">
   <a href="#"><img src="{{ '/images/semisupervised-learning.jpg' | absolute_url }}" alt=""></a>
@@ -240,7 +240,7 @@ Jika sebagian dataset memiliki label dan sebagian lagi tidak.
 ### Reinforcement Learning
 Jika dataset memiliki label tidak dalam bentuk correct output, melainkan dalam bentuk pasangan output dan ukuran seberapa bagus
 output tersebut. Banyak digunakan dalam bidang robotic dan game.
-```Dataset : (input, output, grade for this output).```
+```**Dataset : (input, output, grade for this output).**```
 {: .text-justify}
 
 
